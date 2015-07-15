@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Daily Report - 7.15"
+date:   2015-7-15
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 上午看XFindBugs的源码
+* 中午和下午接着看，大概能看懂的都看懂了，发现AspectJ真是面向方法的，基本所有的bug都是跟INVOKEVIRTUAL有关
+* Shiyuan Yao 的代码...为什么那么爱用CFG...为何不sawCode...
+* 看到代码javap -v是好习惯
+* 傍晚写了点scala的小程序，结果发现算法完全忘记了...
+	
+### 需要做的
+* Insane可以做起来了吧...
+* 写一些scala小程序后用javap分析一下
+* 晚上回去上stackOverflow问一下scala编译汇编生成bytecode的问题
+* 顺便汇报进度
+* 明天看Compile Scala for JVM 的论文
+* 把Coursera上的Homework2做完
+
+
