@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Daily Report - 7.16"
+date:   2015-7-16
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 上午看Scala的公开课，搞不懂Curry Function是啥东西
+* 中午和下午接着看，高阶函数那里懂一些了，开始做作业
+* 傍晚的时候Homework2做完了
+* 找到一篇介绍scala compile的ppt，但是东西比较早（09年的了）
+* Week3的视频没有英语字幕，课程是用法语讲的...gg
+* 找到了现在所有scala的比较出名的开源库（收藏夹里）
+
+### 需要做的
+* 做Coursera Homework3
+* 看Compile Scala for JVM 的论文
+* 试试看能不能从github里面挖commit里的bug
+
+
+
+
