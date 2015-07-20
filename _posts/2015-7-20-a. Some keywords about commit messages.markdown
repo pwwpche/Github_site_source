@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "Some keywords about commit messages"
+date:   2015-7-20
+tags:
+- Lab
+- FindBugs
+---
+
+####Potential bug pattern
+
+deserialize<br>
+https://github.com/avibryant/simmer/commit/fde08bac6e13d8c5dd96291bac217d15808dbc62
+
+
+string interpolation<br>
+https://github.com/kazuhira-r/lyrics-bot/commit/3cf97005bf6daa9be7c03dd6b3816b31f0028ef0
+
+
+def/var<br>
+https://github.com/scala-js/scala-js-dom/commit/4b4a9ba1ba5755ac9ffccdf57835e4dfbcb2f7c4
+
+
+runtime reflection <br>
+https://github.com/scala/scala/commit/06e7e342d1e27097df0b9d0b31a322fd1cf0a34e
+
+
+####filter list
+#####Negative: (including space)
+* |format |
+* |typo |
+* |doc |
+* |document |
+* |README |
+* |version |
+* |.md |
+
+#####Suspect:
+* add
+	
+
+#####Positive: 
+* incorrect
+* buggy
+* bug
+* missing
+* mistake
+* exception
+* infinite
+* corrupt
+	

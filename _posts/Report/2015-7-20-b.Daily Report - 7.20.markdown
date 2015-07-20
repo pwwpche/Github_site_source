@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Daily Report - 7.20"
+date:   2015-7-20
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 上午还是看Coursera的Week5视频，学习Scala的Type
+* 中午困
+* 下午接着看视频
+* 下午的主要任务是在github上找commit
+* 列出了一个初步的Keyword List
+* 写了个小爬虫，爬所有的commit message
+
+### 需要做的
+* 因为数据量巨大，所以做爬虫并行化
+* 学Scala下一块Pattern Matching
+
+
+
+

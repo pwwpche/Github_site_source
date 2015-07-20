@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "Daily Report - 7.17"
+date:   2015-7-17
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 全天基本都在折腾Coursera Homework3，对函数式语言还是不习惯
+* 心情不太好
+
+### 需要做的
+* 做Coursera Homework4
+* 试试看能不能从github里面挖commit里的bug
+
+
+
+
