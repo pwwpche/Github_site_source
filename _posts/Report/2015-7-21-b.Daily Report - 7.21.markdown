@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Daily Report - 7.21"
+date:   2015-7-21
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 看完了scala的Type Matching
+* python爬虫做好并行了，为了一个pool.map弄了半个小时...
+* 加了一点keyword，
+* 筛选commit message的时候可以采用评分机制，具体每个词多少得分要看经验
+
+
+### 需要做的
+* 学Scala的lazy机制
+* 看完awesome-scala里所有database库的commit message
+* 看的时候把相应的scala代码也看懂
+* 做Homework 4
+
+
+
+
