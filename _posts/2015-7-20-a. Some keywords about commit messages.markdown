@@ -45,21 +45,25 @@ https://github.com/milessabin/shapeless/commit/78def231b91b45786aa9676fc1398b868
 ###filter word list
 ####Negative: 
 #####-10
-* typo
+* typo 
 * doc
-* document
-* documentation
-* README
-* version
+* docs
+* document 
+* documentation 
+* README 
+* version 
 * .md
 
 #####-5
+* broken link
 * dependencies
 * dependency
 * comment
 * sbt
 * format
 * improve
+* sample
+* file name
 
 ####Suspect:
 #####-2
@@ -67,13 +71,17 @@ https://github.com/milessabin/shapeless/commit/78def231b91b45786aa9676fc1398b868
 	
 
 ####Positive: 
-#####+10
+#####+5
 * fix
+* fixes
 * exception
 * missing
+* don't
+* do not
 
 #####+20
 * buggy
+* bugfix
 * bug
 * error
 * errors
@@ -81,6 +89,9 @@ https://github.com/milessabin/shapeless/commit/78def231b91b45786aa9676fc1398b868
 * corrupt
 * mistake
 * infinite
+* stackoverflow
+* null pointer
+* npe
 
 
 

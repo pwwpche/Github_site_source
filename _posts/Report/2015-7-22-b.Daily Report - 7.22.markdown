@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Daily Report - 7.22"
+date:   2015-7-22
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 看完了fwbrasil/activate/的所有commit
+* 更新了keywords评分liebioa
+* 找出了一些可能的bug，列出buglist
+
+
+### 需要做的
+* 看完postgresql
+* 看完skinnyframework
+* buglist归类
+* 写完爬虫，自动生成html，bug描述+链接
+* 对于fix#也要做处理
+
+
+### 问题：
+* private var, val , def, protected?
+
+
+
