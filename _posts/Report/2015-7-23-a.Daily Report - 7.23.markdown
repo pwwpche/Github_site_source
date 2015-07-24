@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Daily Report - 7.23"
+date:   2015-7-23
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 看完了postgresql的所有commit
+* bug list 新增一些bug
+* python爬虫现在可以把所有commit写到文件里
+* 爬虫可以自动生成html页面
+* 处理掉了fix#的情况
+
+### 需要做的
+* 看完skinnyframework
+* buglist归类
+* 解决多线程执行一段时间后卡死的问题
+* 可以用solr对所有commit全文索引
+* 看完公开课Lists部分
+
+
+### 问题：
+* private var, val , def, protected?
+
+
+

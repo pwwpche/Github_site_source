@@ -63,12 +63,17 @@ https://github.com/milessabin/shapeless/commit/78def231b91b45786aa9676fc1398b868
 * format
 * improve
 * sample
+* example
 * file name
+* release
+
+
 
 ####Suspect:
 #####-2
 * add
-	
+* version
+* build	
 
 ####Positive: 
 #####+5
@@ -91,7 +96,9 @@ https://github.com/milessabin/shapeless/commit/78def231b91b45786aa9676fc1398b868
 * infinite
 * stackoverflow
 * null pointer
+* null
 * npe
+* synchronization
 
 
 
