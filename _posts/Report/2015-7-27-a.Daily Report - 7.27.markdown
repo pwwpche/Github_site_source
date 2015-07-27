@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Daily Report - 7.27"
+date:   2015-7-27
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 上午看了快学scala里的模式匹配、类型参数两章
+* （其实好多都看的云里雾里的）
+* 中午和下午看完了adamw/macwire里的commit
+* 下午还看了eed3si9n/scalaxb的commit，但里面全都是业务逻辑的bug，真正有价值的东西不多
+* 下午四点多尼玛还困
+* 写了个python脚本自动从commit message根据isFix规则生成bug的汇总html页面
+* 一天的成果是更新了一些bug list和bug的关键词评分
+
+### 需要做的
+* bug list > 70再归类，现在有50+了
+* Lazy Value好好看
+* 类型推导先放一下
+* 继续整理bug list，看完
+* scala的official github repo里面也有不少commit可以看
+* 明天试试吧akka的commit整理完看完吧
+
+
+
