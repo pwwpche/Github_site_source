@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Daily Report - 7.24"
+date:   2015-7-24
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 上午主要解决爬虫的各种问题
+* 似乎如果一个thread没有捕获exception的话就会死掉
+* 中午过后解决爬虫一捕获merge#URL就报错的问题（pull request的链接得从html里拿到，不一定是/pull/）
+* 下午爬虫可以跑了，拿到了所有项目的绝大部分commit message和对应的url
+* 爬下来的东西写数据库了
+* 准备做索引
+* skinnyframework看完了
+
+### 需要做的
+* bug list > 70再归类，现在是39
+* 看完公开课Collection部分
+* 关键的类型推导如何实现，必须看compile scala for jvm那个论文了。
+
+### 问题：
+* private var, val , def, protected?
+* 今天发现似乎def <function name> ： 加了类型的话也可能是bug
+
+
+
+

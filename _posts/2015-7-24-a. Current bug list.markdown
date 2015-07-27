@@ -1,0 +1,126 @@
+---
+layout: post
+title:  "Current bug lists"
+date:   2015-7-24
+tags:
+- Lab
+- FindBugs
+---
+
+###Potential bug pattern
+use before init<br>
+https://github.com/fwbrasil/activate/commit/02f7ec4a005642b01b348bdaee11cf39a922cbc4
+
+import empty <br>
+https://github.com/fwbrasil/activate/commit/36995f1ead8b640fc879def63cde2770d465119f
+
+singleton exception(Improvement)<br>
+https://github.com/fwbrasil/activate/commit/4182a0c82f64ce866844bf72e3f78269d3343004
+
+damn typo...<br>
+https://github.com/fwbrasil/activate/commit/36dcc53026e665751a4de0ee3d1c760e3b1b200f
+
+java.io.Serializable<br>
+https://github.com/fwbrasil/activate/commit/f36b8a797cfe345ea629269ab38aec96429f039b
+
+string prefix<br>
+https://github.com/fwbrasil/activate/commit/250161626631709be9220a879acc52432d6d62ce
+
+remove redundent .type<br>
+https://github.com/fwbrasil/activate/commit/cb2c9d5d4d5efad4a6346d85017b2ce7b7b906b6
+
+concurrent read/write<br>
+https://github.com/fwbrasil/activate/commit/2aa63ec3dc64db66decbcd274b8443422da1b4c5
+
+read/write lock<br>
+https://github.com/fwbrasil/activate/commit/70fbe4070a56ec336fad71a0579c0f9f78c92831
+
+concurrent delete<br>
+https://github.com/fwbrasil/activate/commit/afc003b2c7d669008dacd20686dae5dbb86875a8
+
+possible Null Pointer exception<br>
+https://github.com/fwbrasil/activate/commit/43ff0a11562ff1628cbbd618994ca22cdeeb0276
+
+case fallthrough<br>
+https://github.com/fwbrasil/activate/commit/3bac399611f04ee2792d03ec71b102f937452637
+
+get empty element from map<br>
+https://github.com/fwbrasil/activate/commit/11d7c89632855104cc91be0b05cc40b0deed38b9
+
+undefined field<br>
+https://github.com/fwbrasil/activate/commit/11d7c89632855104cc91be0b05cc40b0deed38b9
+
+type contravarience<br>
+https://github.com/sksamuel/elastic4s/commit/d3406a030a6daaee9cdf3b2fdd522effeff5ae89
+
+too long thread sleep<br>
+https://github.com/sksamuel/elastic4s/commit/0351b7317a86da688beb6d1818f2caf703777275
+
+match operator ===<br>
+https://github.com/mauricio/postgresql-async/commit/682e2bff8864209aa0e51a497cd71c4a6c02d812
+
+some obvious function misuse<br>
+https://github.com/sksamuel/elastic4s/commit/3748069f982accf1ba94c4defd4aac16ba39fd1e
+
+logger cause mem leak<br>
+https://github.com/mauricio/postgresql-async/commit/80876ee3293748e4bb96939e938a95d31b7b8768
+
+foreach rather than map(improvement)<br>
+https://github.com/mauricio/postgresql-async/commit/f754c1b72524974a8d011b458daac9bd4140e590
+
+bad matching syntax, should be _<br>
+https://github.com/mauricio/postgresql-async/commit/6e81e4adcb016cbd7b1e3ed36d5535d9cb6fa762
+
+usage of any and anyRef<br>
+https://github.com/sksamuel/elastic4s/commit/97c8f27ed5addaa2ebe153ca7439c23f8a642f87
+
+23. self calling<br>
+https://github.com/sksamuel/elastic4s/commit/ae73cd393cb967278aa92e53f6c480af0a7e2fac
+
+missing function return type<br>
+https://github.com/aselab/scala-activerecord/commit/6a6e92b6a09078bbb263c580515d95fb82d6f40f
+
+match return type(whether to add bracket is confusing and misleading	)<br>
+https://github.com/scalatra/scalatra/commit/96506a41dc9cc142305ab54e3cefde758fa880ab
+
+reflection(don't quite understand)<br>
+https://github.com/sorm/sorm/commit/ca1236ce8c11fddc844bdf287ed59b20f4a79a53
+
+if everyone use, everyone should use <br>
+https://github.com/scalatra/scalatra/commit/5bc791191f78c6fecd3e6d5f68474c7c84593869
+
+error with return type<br>
+https://github.com/skinny-framework/skinny-framework/commit/ed865e0cc193df6cdb8b478b7cb5c5a4d901612e
+
+get should be consistent<br>
+https://github.com/skinny-framework/skinny-framework/commit/b77a6b69962f4d5f02e5e0da481bc100723ee2ee
+
+member type<br>
+https://github.com/skinny-framework/skinny-framework/commit/5c0a356885939ac03561dd5e64ac0e33109d3d34
+
+duplicated function call<br>
+https://github.com/skinny-framework/skinny-framework/commit/5d06ad52d6d741fc5c1ba624190ad659e70a4752
+
+use function result before check<br>
+https://github.com/skinny-framework/skinny-framework/commit/f48bed91f8688bd0abe93aa6e7e4e4d0a54199a6
+
+not-safe use of toString<br>
+https://github.com/skinny-framework/skinny-framework/commit/35c06c50515988cf49a6092a83fc640fd852f2d9
+
+should check Null ahead<br>
+https://github.com/skinny-framework/skinny-framework/commit/56495db870122bda1c77f32e4f0b52b97677d80a
+
+function name conflick<br>
+https://github.com/skinny-framework/skinny-framework/commit/5c9362edb0905f20c06e94b9bde00ec94b21b042
+
+Another NPE(hard to detect)<br>
+https://github.com/skinny-framework/skinny-framework/commit/2e2a5b439a6a2a5fa1098ac33fe0fa701d782b77
+
+check for unclosed bracket<br>
+https://github.com/skinny-framework/skinny-framework/commit/2134a1c5ccae5a83d9d2efd8eb33b34849fdcfd2
+
+type problems<br>
+https://github.com/skinny-framework/skinny-framework/commit/887f63fefff8f19cf72fbea3126c6b36691245e1
+
+class should be immutable<br>
+https://github.com/skinny-framework/skinny-framework/commit/7061db58c3a713a830db0c15ab7d63ed3834815d
