@@ -7,98 +7,73 @@ tags:
 - FindBugs
 ---
 
-###Potential bug pattern
-
-deserialize<br>
-https://github.com/avibryant/simmer/commit/fde08bac6e13d8c5dd96291bac217d15808dbc62
-
-
-string interpolation<br>
-https://github.com/kazuhira-r/lyrics-bot/commit/3cf97005bf6daa9be7c03dd6b3816b31f0028ef0
-
-
-def/var<br>
-https://github.com/scala-js/scala-js-dom/commit/4b4a9ba1ba5755ac9ffccdf57835e4dfbcb2f7c4
-
-
-runtime reflection <br>
-https://github.com/scala/scala/commit/06e7e342d1e27097df0b9d0b31a322fd1cf0a34e
-
-
-bound check<br>
-https://github.com/twitter/algebird/commit/4987db1f5e55e5d47d37a8ab58a8edf49542ed0f
-
-
-make serializable (improve?)<br>
-https://github.com/twitter/algebird/commit/deedb2ab5e7f27cdf357797fe8df21a98df7e665
-
-
-asInstanceOf is a bad habit<br>
-https://github.com/adamretter/Shadoop/commit/2094397e367c9895f1c3e033f80c3fa673895211
-
-
-unintended Lazy captures<br>
-https://github.com/milessabin/shapeless/commit/78def231b91b45786aa9676fc1398b868056ac04
-
 
 
 ###filter word list
-####Negative: 
-#####-10
-* typo 
-* doc
-* docs
-* document 
-* documentation 
-* README 
-* version 
-* .md
 
-#####-5
-* broken link
-* dependencies
-* dependency
-* comment
-* sbt
-* format
-* improve
-* sample
-* example
-* file name
-* release
+"doc" : -20,
+"document " : -20,
+"readme" : -20,
+"version" : -20,
+".md" : -20,
+"message" : -20,
+"documentation " : -20,
+"docs" : -20,
+"pom" : -20, 
+
+"environment" : -10,
+"typo " : -10,
+"sbt" : -10,
+"spec" : -10,
+"dependencies" : -10,
+"dependency" : -10,
+"deprecat" : -10,
+"link" : -10,
+"rename" : -10,
+"indent" : -10, 
+"spelling" : -10,
+"error log" : -10,	
+"support" : -10,
+"improv" : -10,
+
+"better" : -5,
+"report" : -5, 
+"comment" : -5,
+"format" : -5,
+"sample" : -5,
+"example" : -5,
+"file name" : -5,
+"release" : -5,
+"add" : -5,
+"build" : -5,
+"version" : -5,
 
 
+"fix" : +5,
+"fixes" : +5,
+"correct" : +5, 
+"exception" : +5,
+"missing" : +5,
+"don't" : +5,
+"do not" : +5,
+"failure" : +5,
+"return type" : +5,
+"should" : +5,
 
-####Suspect:
-#####-2
-* add
-* version
-* build	
 
-####Positive: 
-#####+5
-* fix
-* fixes
-* exception
-* missing
-* don't
-* do not
-
-#####+20
-* buggy
-* bugfix
-* bug
-* error
-* errors
-* incorrect
-* corrupt
-* mistake
-* infinite
-* stackoverflow
-* null pointer
-* null
-* npe
-* synchronization
+"buggy" : +10,
+"bugfix" : +10,
+"bug" : +10,
+"error" : +10,
+"errors" : +10,
+"incorrect" : +10,
+"corrupt" : +10,
+"mistake" : +10,
+"infinite" : +10,
+"stackoverflow" : +10,
+"null pointer" : +10,
+"null" : +10,
+"npe" : +10
 
 
 

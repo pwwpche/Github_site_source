@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Daily Report - 7.28"
+date:   2015-7-28
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 主要整理了lift-framework里的bug列表
+* 下午还是困，到底怎么回事
+* 更新buglist和keyword list
+* 加了几个没爬到的scala repo
+* 知道了val是编译时evaluate，def是运行时evaluate
+* 收获两个deadlock的bug
+
+### 需要做的
+* akka别动了，会爆炸
+* 把lift-framework看完
+* 关键词列表要更新，整理出更准确的bugfix list
+* yesterday收藏夹里有点东西要看完
+* 网上找找scala的lazy机制的资料吧
+* 开始把bug list分类，写清楚详细bug原因
+
+
+###问题
+* bug fix里面有非常多的NPE检测，是否需要仔细看（因为里面几乎都涉及到了程序逻辑问题，可能并不是pattern）
+
+
+
+
