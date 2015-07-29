@@ -7,8 +7,17 @@ tags:
 - Bug_list
 ---
 
-###Possible bug pattern
+###Prefix
+* [Not sure] : Not sure whether it is a bug
+* [Possible] : More probable than [Not sure]
+* [Bug] : It is a bug and I know why
+* [Improvement] : This is a fix to improve performance or something, but not a bug fix
+* [Can't detect] : This is a bug, but I don't know how to detect it(maybe because it is more related with the program logic)
+* [Don't understand] : Commit message define it a "bug fix", but I can't tell why
+* [Warning] : This looks likes a bug BUT IT IS NOT
+* [Ignore] : This is a bug, but not critical
 
+###Possible bug pattern
 [Not sure]deserialize<br>
 https://github.com/avibryant/simmer/commit/fde08bac6e13d8c5dd96291bac217d15808dbc62
 
