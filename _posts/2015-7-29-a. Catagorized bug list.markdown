@@ -1,0 +1,132 @@
+---
+layout: post
+title:  "Catagorized bug lists"
+date:   2015-7-29
+tags:
+- Lab
+- Bug_list
+---
+
+####String interpolation error
+#####[Bug]missing prefex in string interpolation
+https://github.com/lift/framework/commit/dc632a927a22a9b81ff5422fdc1ba389ce47595f
+#####[Bug]broken string interpolation(missing prefix)
+https://github.com/lift/framework/commit/51b4f9dbf672d12a3aa5227e4fbecdadf6493bf5
+
+
+
+####Obvious error
+#####[Bug]self calling<br>(an obvious error, with function self-calling without any change to parameters)
+https://github.com/sksamuel/elastic4s/commit/ae73cd393cb967278aa92e53f6c480af0a7e2fac
+#####[Bug]some obvious function misuse<br>
+https://github.com/sksamuel/elastic4s/commit/3748069f982accf1ba94c4defd4aac16ba39fd1e
+- The following need to analyze source code, not compiled .class)
+#####[Bug]wrong intended null evaluation
+https://github.com/lift/framework/commit/7cc7134c37a599dd7f80a646eb0ce49d1d318862
+#####[Bug]damn typo...(class name is "not in", but toString() return "in")
+https://github.com/fwbrasil/activate/commit/36dcc53026e665751a4de0ee3d1c760e3b1b200f
+#####[Bug]use before init<br>(should be -> if(initialize) then do some work)
+https://github.com/fwbrasil/activate/commit/02f7ec4a005642b01b348bdaee11cf39a922cbc4
+#####[Bug]function name conflict<br>(addHeader() and setHeader())
+https://github.com/skinny-framework/skinny-framework/commit/5c9362edb0905f20c06e94b9bde00ec94b21b042
+- If yuse IDE, obvious these errors can be eliminated
+#####[Bug]check for unclosed bracket<br>
+https://github.com/skinny-framework/skinny-framework/commit/2134a1c5ccae5a83d9d2efd8eb33b34849fdcfd2
+
+
+
+####Concurrency and Lock
+#####[Bug]concurrent lock error<br>(index in unload() is not protected by lock)
+https://github.com/fwbrasil/activate/commit/2aa63ec3dc64db66decbcd274b8443422da1b4c5
+#####[Bug]read/write lock<br>(Move lazy inside lock scope, but why?)
+https://github.com/fwbrasil/activate/commit/70fbe4070a56ec336fad71a0579c0f9f78c92831
+#####[Bug]concurrent delete<br>(not all map.put are protected, so duplicated get() will lead to different result)
+https://github.com/fwbrasil/activate/commit/afc003b2c7d669008dacd20686dae5dbb86875a8
+#####[Bug]deadlock(one holds asyncSync while another holds msgCallbackSync)
+https://github.com/lift/framework/commit/820a15d7a2c5e2bb4eb00352b325412393329998
+#####[Bug]reentrantreadwritelock deadlock(one holds readlock and another holds writelock, but why writelock could be held twice?)
+https://github.com/lift/framework/commit/9dc635255f15bca027db5735e94ddfbbd800aa56
+
+
+
+####NPE
+#####[Bug]possible Null Pointer exception<br>
+https://github.com/fwbrasil/activate/commit/43ff0a11562ff1628cbbd618994ca22cdeeb0276
+#####[Bug]get empty element from map<br>
+https://github.com/fwbrasil/activate/commit/11d7c89632855104cc91be0b05cc40b0deed38b9
+#####[Bug]undefined field<br>(in Reflection.getStatic())
+https://github.com/fwbrasil/activate/commit/11d7c89632855104cc91be0b05cc40b0deed38b9
+#####[Bug]not-safe use of toString<br>
+https://github.com/skinny-framework/skinny-framework/commit/35c06c50515988cf49a6092a83fc640fd852f2d9
+#####[Bug]should check Null ahead<br>
+https://github.com/skinny-framework/skinny-framework/commit/56495db870122bda1c77f32e4f0b52b97677d80a
+#####[Bug]Another NPE(hard to detect)<br>
+https://github.com/skinny-framework/skinny-framework/commit/2e2a5b439a6a2a5fa1098ac33fe0fa701d782b77
+https://github.com/lift/framework/commit/0836f2a926c33bf72d8babe36d958653b146bbc1
+https://github.com/lift/framework/commit/ce4bf6f1a5d1c8c71001e24ca537c5800ac7c541
+https://github.com/lift/framework/commit/a09b633327405cf3c4aad2c0c124ea5b897428b5
+#####[Bug]null check of string
+https://github.com/lift/framework/commit/e6d70f393e32493bfc413ddad79711340903992a
+https://github.com/lift/framework/commit/5312678ef896a5a5de1063b4b54b391df77d1738
+https://github.com/lift/framework/commit/edebbd744804ce7f4e3e15d2512e53d304ee5b78
+https://github.com/lift/framework/commit/1e24fe928cdfd482445b8fa5223cad3dc956acf2
+#####[Bug]null serialization
+https://github.com/lift/framework/commit/97b92da891458b447946bdc2b8678a26f831fc19
+
+
+
+####Pattern Matching
+#####[Bug]case fallthrough<br>(In scala, case will not fall through, so any empty => block will be suspicious)
+https://github.com/fwbrasil/activate/commit/3bac399611f04ee2792d03ec71b102f937452637
+#####[Bug]bad matching syntax, should be _<br>(Invalid matching syntax)
+https://github.com/mauricio/postgresql-async/commit/6e81e4adcb016cbd7b1e3ed36d5535d9cb6fa762
+#####[Bug]nonsense behavior of match(what does "()" do)
+https://github.com/lift/framework/commit/aab84d819cc6f2abe040f6a84dd6949bb156256a
+
+
+####Pattern matching is not complete
+#####[Bug]missing default match option(this matching cannot generate "True" result for boolean matching)
+https://github.com/lift/framework/commit/77ba2b73e800358405f9bbbe1e2ac3f26126d951
+#####[Bug]missing default match
+https://github.com/lift/framework/commit/9b370d1bf627a38ebc0bdd7b8aa0152653f49807
+https://github.com/lift/framework/commit/97c08c7dd9ed161a83f6c3b716e03bbec98f28fc
+#####[Bug]dead match condition(This one needs further check)
+https://github.com/lift/framework/commit/deb27666c0f8936aa12763afd74aba1439305f40
+
+
+####All except this
+#####[Bug]if everyone use, everyone should use <br>(file is used in matching case but not in processing block)
+https://github.com/scalatra/scalatra/commit/5bc791191f78c6fecd3e6d5f68474c7c84593869
+#####[Bug]missing .value(all except one pattern)
+https://github.com/eed3si9n/scalaxb/commit/c90cb88c760d67b804df2a2418b4e5a60661656c
+
+
+
+####Function return type(Need to study how type is generated)
+#####[Bug]error with return type<br>
+https://github.com/skinny-framework/skinny-framework/commit/ed865e0cc193df6cdb8b478b7cb5c5a4d901612e
+#####[Bug]type mismatch
+https://github.com/lift/framework/commit/1ffac230fea785e221e9ecb2a1b106c324700a2b
+
+
+####Type checking
+#####[Bug]check for type[Nothing]
+https://github.com/adamw/macwire/commit/366611f2364678efd625a446a93341deb62b825c
+#####[Bug]argument type error(need further insight)(Cross check with function call)
+https://github.com/lift/framework/commit/f01b9d5fc50533f3c2ba932357fac8c39a1fd1ea
+#####[Bug]incorrect type check
+https://github.com/lift/framework/commit/ea5f68c2208ea3d7907e7a089b0883d89e54a876
+#####[Bug]type mismatch in pattern matching
+https://github.com/lift/framework/commit/1c7c0c3c23e77c6c2adfb3eb36080cbed57530a8
+
+
+
+
+####Enumeration
+#####[Bug]enum with duplicated value(value(10) was used twice)
+https://github.com/lift/framework/commit/5f09c86fdc72ae163d2fc4d4415b764e3d92be1f
+
+####Syntax error
+#####[Bug]incorrect usage of array buffer(obvious)
+https://github.com/lift/framework/commit/0b80e60948498400639949422d6040744cc45c76
+
