@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Daily Report - 7.29"
+date:   2015-7-29
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* lift-framework看完了
+* 目前的bug list分类做完了，并且每个bug前面都加了分类标签
+* bug list关键词列表略微更新
+* 中午终于困得睡着了
+* 进度汇报完了，接着做更新buglist
+
+### 需要做的
+* 再看完两个framework吧，cross checking会使正确率高一些
+* 更新完目前的关键词列表，并用之扫一遍skinny 和lift的commit message
+* 看看implicit 的scope之前有没有出现过，觉得这也可能是一个坑
+* 对NPE归类，看以前bug的源码
+* 找找scala如何做类型推导的资料
+* lazy的资料没找，明天要找。
+
+
