@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Some keywords about commit messages"
+title: "Some keywords about commit messages"
 date:   2015-7-20
 tags:
 - Lab
@@ -12,18 +12,18 @@ tags:
 ###filter word list
 
 "doc" : -20,
-"document " : -20,
+"document" : -20,
 "readme" : -20,
 "version" : -20,
 ".md" : -20,
 "message" : -20,
-"documentation " : -20,
+"documentation" : -20,
 "docs" : -20,
 "pom" : -20, 
 "error notification" : -20, 
 
 "environment" : -10,
-"typo " : -10,
+"typo" : -10,
 "sbt" : -10,
 "spec" : -10,
 "dependencies" : -10,
@@ -38,7 +38,8 @@ tags:
 "improv" : -10,
 ".xml" : -10,
 "simplify" : -10,
-
+"spacing" : -10,
+"space" : -10,
 
 "better" : -5,
 "report" : -5, 
@@ -53,6 +54,8 @@ tags:
 "version" : -5,
 "url" : -5, 
 "merge" : -5,
+"test" : -5,
+"debug" : -5,
 
 
 "fix" : +5,

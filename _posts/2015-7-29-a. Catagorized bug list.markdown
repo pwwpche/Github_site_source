@@ -7,7 +7,7 @@ tags:
 - Bug_list
 ---
 
-####String interpolation error
+####String interpolation error()
 #####Bug - missing prefex in string interpolation
 https://github.com/lift/framework/commit/dc632a927a22a9b81ff5422fdc1ba389ce47595f
 #####Bug - broken string interpolation(missing prefix)
@@ -31,7 +31,8 @@ https://github.com/fwbrasil/activate/commit/02f7ec4a005642b01b348bdaee11cf39a922
 https://github.com/skinny-framework/skinny-framework/commit/5c9362edb0905f20c06e94b9bde00ec94b21b042
 #####Bug - check for unclosed bracket(If use IDE, obvious these errors can be eliminated)
 https://github.com/skinny-framework/skinny-framework/commit/2134a1c5ccae5a83d9d2efd8eb33b34849fdcfd2
-
+[Bug]same var used twice between statement
+https://github.com/twitter/algebird/commit/3dab7aa8ac8e093dfb367476c5672e844ff6a818
 
 
 ####Concurrency and Lock
@@ -129,3 +130,6 @@ https://github.com/lift/framework/commit/5f09c86fdc72ae163d2fc4d4415b764e3d92be1
 #####Bug - incorrect usage of array buffer(obvious)
 https://github.com/lift/framework/commit/0b80e60948498400639949422d6040744cc45c76
 
+Type misuse
+[Bug] int divided by int(density, which is used above, should be double instead of int)
+https://github.com/twitter/algebird/commit/0642b720f71f15fe9180598b920b32d4ccc55e9d

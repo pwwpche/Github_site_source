@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "TODO in August"
+date:   2015-7-30
+tags:
+- Lab
+---
+
+* 先做一个最简单的bug detector出来（可以用string interpolation那个，配合regex做）
+* 然后再找一些bug pattern，关键在于pattern要是有效的，尽可能检测出很多bug来最好
+* detector数量可多可少，注意控制时间
+* 写其他detector的代码，对于NPE和Deadlock上网找论文
+* 类型检查是个问题，这个要好好看论文
+* 最后解决false positive的问题
+* 八月底之前完成所有工作
+
+

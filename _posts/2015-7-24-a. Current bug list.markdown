@@ -281,3 +281,17 @@ https://github.com/lift/framework/commit/4ad245afe62221b39c4f5edc9ffb1b5c744c951
 [Possible]perhaps bad matching?
 https://github.com/lift/framework/commit/7263c58852706fd88bd3fbe02f007a4acbd25dbd	
 
+[Bug] int divided by int
+https://github.com/twitter/algebird/commit/0642b720f71f15fe9180598b920b32d4ccc55e9d
+
+[Compile error]type error
+https://github.com/twitter/algebird/commit/c1e367b5239271c76b5aa7783386da290c0beae2
+
+[Bug]same var used twice between statement
+https://github.com/twitter/algebird/commit/3dab7aa8ac8e093dfb367476c5672e844ff6a818
+
+[Not sure]reuse an iterator
+https://github.com/twitter/algebird/commit/f8cbd5d52eabfcbbc99fa3ccb2af9cb1a5485959
+
+[Not sure]map toSeq error
+https://github.com/twitter/algebird/commit/6f4559e5391be084baecca0bb4fcb6fe131eb604

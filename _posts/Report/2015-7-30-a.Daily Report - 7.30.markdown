@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Daily Report - 7.30"
+date:   2015-7-30
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 看了一个twitter_algebird，收获基本为0
+* 列了一下八月份要做的事情
+* lazy的东西略微看了一下，似乎帮助也不是很大
+
+
+### 需要做的
+* 写一个detector
+* 用string interpolation的那个写
+* 再看一个repo吧
+
+
