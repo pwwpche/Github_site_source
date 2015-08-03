@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Daily Report - 8.3"
+date:   2015-8-3
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 上午弃疗了，冰与火之歌三观太正
+* 中午改装了一下commit爬虫，把所有项目源码爬下来了，计划做个全文搜索用来找代码什么的
+* 下午看play framework的bug，没用，人家代码质量也高，commit都是程序逻辑修复的
+* 晚上看了个reactive-collections，这里可用的错误多一些
+
+
+### 需要做的
+* 明天再看三个个小一点的repo吧，那种html在7k-12k的这种
+* 类型推导赶紧看
+* 把ppt里的bug list挑出2个写plugin吧
+

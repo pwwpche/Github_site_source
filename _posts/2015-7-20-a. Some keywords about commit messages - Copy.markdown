@@ -40,8 +40,10 @@ tags:
 "simplify" : -10,
 "spacing" : -10,
 "space" : -10,
+"script" : -10,
+"better" : -10,
+"package" : -10,
 
-"better" : -5,
 "report" : -5, 
 "comment" : -5,
 "format" : -5,
@@ -56,6 +58,12 @@ tags:
 "merge" : -5,
 "test" : -5,
 "debug" : -5,
+"log" : -5,
+"config" : -5, 
+
+
+"order" : -3,
+
 
 
 "fix" : +5,
@@ -68,7 +76,7 @@ tags:
 "failure" : +5,
 "return type" : +5,
 "should" : +5,
-
+"unsafe" : +5,
 
 "buggy" : +10,
 "bugfix" : +10,

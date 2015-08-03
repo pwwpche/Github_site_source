@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Daily Report - 7.31"
+date:   2015-7-31
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 写完了String Interpolation检测的plugin
+* 看了一半scoobi的fix commit，用处也相当小，人家代码质量高没办法...
+* 找到了一个PDM什么的，是检测source code的，不知道有没有用
+
+
+### 需要做的
+* string interpolation 这种最简单的东西处理起来也不是很方便
+* 至少再看两个“有点用”的repo，总结bug list
+* NPE和Deadlock先放下，开始看Runtime Type的文章
+* 看看老师给的东西里面有没有什么比较有用pattern（比如equal no hashcode这种）
+
+
