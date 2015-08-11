@@ -43,9 +43,14 @@ tags:
 "script" : -10,
 "better" : -10,
 "package" : -10,
+" jar" : -10,
+"jar " : -10,
+"version" : -10,
 
+"clean up" : -5,
 "report" : -5, 
 "comment" : -5,
+"packet" : -5,
 "format" : -5,
 "sample" : -5,
 "example" : -5,
@@ -53,7 +58,6 @@ tags:
 "release" : -5,
 "add" : -5,
 "build" : -5,
-"version" : -5,
 "url" : -5, 
 "merge" : -5,
 "test" : -5,
@@ -63,7 +67,7 @@ tags:
 
 
 "order" : -3,
-
+"print" : -3,
 
 
 "fix" : +5,
@@ -76,6 +80,7 @@ tags:
 "failure" : +5,
 "return type" : +5,
 "should" : +5,
+"in order to" : +5,
 "unsafe" : +5,
 
 "buggy" : +10,

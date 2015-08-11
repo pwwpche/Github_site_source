@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Daily Report - 8.5"
+date:   2015-8-5
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 剧=坑
+* 看了不少小repo
+
+
+### 需要做的
+* 坑...
+

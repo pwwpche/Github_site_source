@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Daily Report - 8.10"
+date:   2015-8-10
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 上午接着找别人的repo，增加buglist
+* 重点用regex验证找到的bug是不是pattern
+* Power4GREP很好用
+* 下午崩了，找到一个Scapegoat做的跟自己做的东西一样，而且找的pattern更多
+* 晚上似乎没什么好做的了...
+
+
+### 需要做的
+* 接着找bug list
+* what should we do now?
+
+

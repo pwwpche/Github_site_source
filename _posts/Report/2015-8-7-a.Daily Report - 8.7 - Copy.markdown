@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Daily Report - 8.7"
+date:   2015-8-7
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 还是看别人的repo
+* 增加了一些bug list
+* 考虑用regex找bug pattern
+* 发现string interpolation的确是个pattern，但其他的不好说
+
+
+
+### 需要做的
+* 接着找bug list
+* 用regex试试其他bug pattern能不能找出来
+
+
