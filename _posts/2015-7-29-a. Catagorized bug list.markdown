@@ -23,6 +23,9 @@ https://github.com/nicta/scoobi/commit/20c875e1a1fb2710e7efd8a1dd211e8b3cda1341
 https://github.com/storm-enroute/reactive-collections/commit/0761e212e486e624dd2f3a69bdcbcb541deb64a9
 #####Bug - function name conflict(addHeader() and setHeader())
 https://github.com/skinny-framework/skinny-framework/commit/5c9362edb0905f20c06e94b9bde00ec94b21b042
+#####[Bug]ambiguous name
+https://github.com/milessabin/shapeless/commit/ddd46e7a6ce856904b5c52b55278f487f47eb634
+
 
 
 #####Bug - some obvious function misuse
@@ -41,8 +44,6 @@ Regex : if.*((.*(!=|ne)\s*null)|null\s*(!=|ne).*).*Nil
 https://github.com/fwbrasil/activate/commit/36dcc53026e665751a4de0ee3d1c760e3b1b200f
 check : Duplicate toString values in case class with only one string involved, and class names are different
 Regex : def toString\s*=\s*"[^"]*"
-
-
 #####Bug - use before init(should be -> if(initialize) then do some work)
 https://github.com/fwbrasil/activate/commit/02f7ec4a005642b01b348bdaee11cf39a922cbc4
 #####Bug - check for unclosed bracket(If use IDE, obviously these errors can be eliminated)
@@ -53,12 +54,6 @@ https://github.com/twitter/algebird/commit/3dab7aa8ac8e093dfb367476c5672e844ff6a
 https://github.com/storm-enroute/reactive-collections/commit/a06257201def332e59f5966f37d21f47ef290f00
 [Bug]False condition(could be detected by NullChecker in findBugs)
 https://github.com/storm-enroute/reactive-collections/commit/5d6581c23641141cfacb9491c5e8f1426383c39f
-
-
-
-
-
-
 
 
 ####Concurrency and Lock
@@ -104,6 +99,8 @@ https://github.com/lift/framework/commit/1e24fe928cdfd482445b8fa5223cad3dc956acf
 #####Bug - null serialization
 https://github.com/lift/framework/commit/97b92da891458b447946bdc2b8678a26f831fc19
 https://github.com/aselab/scala-activerecord/commit/e43f4ac6a1303cbf4905a914982da1b8f9e9ab56
+#####[Bug] should check exist first
+https://github.com/unfiltered/unfiltered/commit/2d3706f7e03ac923be7fc55d87ad0b2f06cfdf77
 
 
 ####Pattern Matching
@@ -119,7 +116,7 @@ https://github.com/lift/framework/commit/aab84d819cc6f2abe040f6a84dd6949bb156256
 
 
 ####Pointer OutOfBound
-[Bug]mat.length is < n, so mat(n-1) is out of bound
+#####[Bug]mat.length is < n, so mat(n-1) is out of bound
 https://github.com/BIDData/BIDMach/commit/21942503ceca49eb6b862c7e1b74b51455d1523c
 
 ####Pattern matching is not complete
@@ -182,7 +179,9 @@ https://github.com/jrudolph/sbt-dependency-graph/commit/0bcd2e03f49f6c7133e9ef9e
 https://github.com/twitter/algebird/commit/f8cbd5d52eabfcbbc99fa3ccb2af9cb1a5485959
 #####[Bug] misuse of Array(missing new)
 https://github.com/BIDData/BIDMach/commit/479faa4a9afa3d126019547809a8e140b545b65c
-
+#####[Bug]False type compare syntax
+http://docs.scala-lang.org/overviews/reflection/symbols-trees-types.html, ( == incorrectly reports that )
+Regex : ==\s*typeOf\[[^\]]+\]
 
 ####Type misuse
 #####[Bug][Case] int divided by int(density, which is used above, should be double instead of int)
@@ -204,10 +203,10 @@ https://github.com/playframework/playframework/commit/8589377861f242be38bb5a85c2
 [Bug]unused function parameter
 https://github.com/etorreborre/specs2/commit/a455c55b6d0c014e36f18ec39260ec79a65afa4d
 
-
-
 ####Override hashCode and equals
 Regex : ^(?!override)\s*def hashCode\(\)
 [Style] override members of the super class
 https://github.com/BIDData/BIDMach/commit/d35f06bc3ae4da8ab604635453ba512ef6d1477b
+
+
 

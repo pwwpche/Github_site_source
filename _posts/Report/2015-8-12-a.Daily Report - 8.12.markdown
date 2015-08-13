@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Daily Report - 8.11"
+date:   2015-8-11
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 上午看了两个repo，发现还是没什么...
+* 中午被老师放鸽子了
+* 下午先弄好了scapegoat（其实是昨天晚上弄好的），用test可以直接跑不同inspector的测试用例，很方便
+* 傍晚写了一个判断type比较语句有没有用错等号的例子，跑起来了，在equality.compareFloatingTypes里
+* 弄出来自己的测试框架
+
+### 需要做的
+* 弄明白scalagoat如何遍历AST的
+* 写两个inspector
+
+
+
