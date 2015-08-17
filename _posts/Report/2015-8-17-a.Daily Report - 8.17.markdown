@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "Daily Report - 8.17"
+date:   2015-8-17
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 上周四搞明白了如何写inspector，只要跑测试的test class就行了
+* 上周四也写了一个最简单的inspector，放到
+* 上周五在寝室收拾了一天东西，很爽
+* 从commit log就能看出越来越不努力了。。。
+* 上午看混乱的inspector，没多少收获
+* 下午照葫芦画瓢写了一个infinite recursion的inspector，最简单的测试用例过了，没试过should not warning的用例
+* 晚上弄出来了unused local variable的inspector，不知道该怎么搞
+* iterate var in if 还没写出来，可能不好写
+
+### 需要做的
+* bug list不够用了=。=再看三个repo，至少再找出三个bug来
+* 写两个inspector
+
+
+
