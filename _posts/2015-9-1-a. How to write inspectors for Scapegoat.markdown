@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "How to write inspectors for Scapegoat"
+date:   2015-9-1
+tags:
+- Lab
+---
+
+#####Check the inspections in com.sksamuel.scapegoat.inspections
+
+All the inspectors can be found here. Just copy one of them and write the code in inspect()
+
+#####Use showRaw(reify{...}) to generate the AST of possible pattern
+
+Write a piece of code that may contains a bug, which should better be simple and representative. 
+
+Type following code in cmd:
+
+{% highlight java %}
+> scala
+> import scala.reflect.runtime.universe._
+> :paste
+> showRaw(reify{ /*Your code here*/ })
+{% endhighlight %}
+
+And then, check the AST generated. Here is a simple python program to format them
+
+{% highlight python %}
+tabCnt = 0
+resultStr = ""
+nextPos = 0;
+newLine = False
+str = "PUT YOUR AST STRING HERE"
+for c in str :
+    nextPos = nextPos + 1
+
+    if(newLine) :
+#        resultStr = resultStr + "\t" * tabCnt + "\n" 
+        tabCnt = tabCnt - 1
+        resultStr = resultStr + ")," + "\n" #"),"
+        resultStr = resultStr + "\t" * tabCnt
+
+        newLine = False
+        continue
+    if( c == '(') :
+        resultStr = resultStr + c + "\n"
+        tabCnt = tabCnt + 1
+        resultStr = resultStr + "\t" * tabCnt
+    elif (c == ')' and (nextPos < len(str) and str[nextPos] == ',')) :
+        newLine = True
+        continue
+    elif (c == ')' and (nextPos < len(str) and str[nextPos] == ')')) :
+        resultStr = resultStr + "\n" 
+        tabCnt = tabCnt - 1
+        resultStr = resultStr + "\t" * tabCnt
+        resultStr = resultStr + c
+    else :
+        resultStr = resultStr + c
+        
+print resultStr
+{% endhighlight %}
+
+
+

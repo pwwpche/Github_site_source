@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Daily Report - 8.18"
+date:   2015-8-18
+tags:
+- Lab
+- Report
+---
+
+### 完成的任务
+* 写了两个inspector
+* 貌似有点明白如何遍历一个函数了
+* InfiniteWhile那个还真不好写
+* 思考一下上面这个怎么写吧
+* 修改一下string interpolation的关于ImplicitNot Found的falsePositive
+
+### 需要做的
+* 再看三个repo，repo别太大...
+* 写两个inspector
+
+
+
