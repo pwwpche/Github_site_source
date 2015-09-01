@@ -21,24 +21,24 @@ Write following code to project/plugins.sbt
 
 ####Results
 #####Success
-* adamw_macwire		56s
+* adamw_macwire			56s
 * AsyncttpClient-async...	
 * daniel-trinh_scalariform
-* p2t2_figaro			122s
-* dickwall_subcut		13s
-* dispatch_reboot		25s
-* dylemma_scala-frp	13s
-* etaty_rediscala		50s
-* fehmicansaglam_tepkin 	54s
-* finagle_finch		80s
-* maxcellent_lamma	24s
-* mesosphere_chaos	45s
-* ngocdaothanh_netcaty_master	4s
-* nafg_reactive_v0.4.0	98s
-* novus_salat__master	29s
-* ReactiveMongo_ReactiveMongo_master	58s
-* ReactiveX_RxScala_0.x	32s
-* romainreuillon_mgo_master	98s
+* p2t2_figaro			122s(done, with some bugs)
+* dickwall_subcut		13s(done)
+* dispatch_reboot		25s(done, with some bugs, should clean before running scapegoat)
+* dylemma_scala-frp		13s(done)
+* etaty_rediscala		50s(compile failed, wtf)
+* fehmicansaglam_tepkin 	54s(compile error, with some bugs)
+* finagle_finch		80s	(done, found nothing)
+* maxcellent_lamma	24s	(done, found nothing)
+* mesosphere_chaos	45s	(done, found something)
+* ngocdaothanh_netcaty_master	4s	
+* nafg_reactive_v0.4.0	98s(found an actual bug(well...seems not a bug))
+* novus_salat__master	29s(found some bugs)
+* ReactiveMongo_ReactiveMongo_master	58s(find some bugs)
+* ReactiveX_RxScala_0.x	32s(lots of recursion false positives)
+* romainreuillon_mgo_master	98s(find some bugs)
 * SandroGrzicic_ScalaBuff_master	28s
 * scala_async_master	33s
 * scala_pickling_0.10.x	104s

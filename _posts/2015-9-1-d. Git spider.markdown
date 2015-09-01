@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Github commit spider + code spider"
+title:  "Github commit spider & code spider"
 date:   2015-9-1
 tags:
 - Commits
