@@ -4,6 +4,7 @@ title:  "How to write inspectors for Scapegoat"
 date:   2015-9-1
 tags:
 - Lab
+- Scapegoat
 ---
 
 #####Check the inspections in com.sksamuel.scapegoat.inspections

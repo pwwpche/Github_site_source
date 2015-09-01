@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "Install jekyll on Windows"
+date:   2015-9-1
+tags:
+- jekyll
+- ruby
+---
+
+<p class="intro">为了给ssd里的win7安jekyll，重新弄了一遍ruby。大部分都是抄的</p>
+
+抄的链接在这里 [Run Jekyll on Windows][RJOW] 
+
+1. 到ruby官网上下载ruby和rubydev的安装包，没事闲着还是别用x64吧
+2. 自己配配环境变量，把ruby21/bin加到PATH里
+3. 安装时，目录里不要带空格，否则后面gem install jekyll会报runtime error（看这里：[Invalid switch in RUBYOPT][RUBYOPT]）
+4. 下载rubygem直接安装
+5. 安好后把gem的source改一下,确保gem sources -l后只有淘宝的源
+
+{%highlight ruby%}
+$ gem sources --remove https://rubygems.org/
+$ gem sources -a https://ruby.taobao.org/
+$ gem sources -l
+{%endhighlight%}
+
+6.等着安装吧，下taobao的源下比官方的快多了
+
+
+[RJOW]:http://jekyll-windows.juthilo.com/1-ruby-and-devkit/
+[RUBYOPT]:http://stackoverflow.com/questions/16898286/error-invalid-switch-in-rubyopt-f-runtimeerror-is-shown-while-install-gems
