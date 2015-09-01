@@ -1,0 +1,240 @@
+---
+layout: post
+title:  "Github commit spider + code spider"
+date:   2015-9-1
+tags:
+- Commits
+- Python
+- Lab
+---
+
+
+
+
+
+####Spider intro
+* Bazinga
+
+####Code
+#####Code spider
+{% highlight python %}
+from pyquery import PyQuery as pq
+import urllib
+import urllib2
+import re
+from multiprocessing.dummy import Pool as ThreadPool
+
+
+commonLinkHeader = "https://github.com"
+projCollectionAddr = "https://github.com/lauris/awesome-scala"
+
+def retrieveProject():
+    #Retrieve project list
+    collPage = pq(projCollectionAddr)
+    collStr = collPage("article.entry-content")
+    #Get url of each project
+    projURLs = re.findall(r'https://github.com/[^"]*', str(collStr))
+    
+    #projURLs = []
+    
+    #projURLs.append("https://github.com/akka/akka")
+    #projURLs.append("https://github.com/scalameter/scalameter")
+    #projURLs.append("https://github.com/scala-blitz/scala-blitz")
+    #projURLs.append("https://github.com/nbronson/scala-stm")
+    #projURLs.append("https://github.com/spray/spray")
+    #projURLs.append("https://github.com/argonaut-io/argonaut")
+    #projURLs.append("https://github.com/tumblr/colossus")
+    
+
+    
+    website = []
+    # Make the Pool of workers
+    pool = ThreadPool(30)
+    #website.append()
+    website.append(pool.map(retrieveWebsite, projURLs))
+    pool.close() 
+    pool.join() 
+    #db.close()
+
+
+def retrieveWebsite(url) :
+    print "Thread start with url %s\n" % url 
+    #Search commits in current project with this url
+    try:       
+        #Remove two not-useful urls
+        if(url.find("awesome") != -1 ):
+            print "Thread stop with url %s\n" % url
+            return
+        
+        #Modify file name
+        prefix = url.replace("https://github.com/", "")
+        prefix = prefix.replace("/", "_")
+
+        
+        #Retrieve repository zip
+        archiveURL = commonLinkHeader + "/" + pq(url)("div.only-with-full-nav")("a[rel='nofollow']").attr('href')
+        print "archive = " + archiveURL
+        filestart = archiveURL.rfind('/')
+        filename = prefix + "_" + archiveURL[filestart + 1 : ]
+        print "filename = " + filename
+        urllib.urlretrieve(archiveURL, filename)
+
+        print "Thread stop with url %s" % url
+    except Exception, e:
+        print url
+        print str(e)
+
+
+#=========Main Prog==============
+retrieveProject()
+{% endhighlight %}
+
+
+#####Code spider
+
+{% highlight python %}
+#FetchCommit.py
+
+from pyquery import PyQuery as pq
+import urllib
+import re
+
+pageURL = "https://github.com/xitrum-framework/scala-xgettext"
+
+
+def retrieveMergeMsg(url) :
+    thisURL = url
+    try : 
+        mergePage = pq(thisURL)
+        pageMsgElem = pq(mergePage("span.js-issue-title")).text()
+        return pageMsgElem
+    except :
+        return ""
+
+
+def retrievePageContent(pageURL, commitAddr, pageNum):
+    newURL =  "https://github.com/" + commitAddr + "?page=" + str(pageNum) + "\n"
+    print newURL
+    try : 
+        project = pq(newURL)
+        p = project("p.commit-title")
+
+        #Exit loop when retrieving complete
+        if(p.length == 0) :
+            print pageURL.replace("https://github.com/", "") + " is finished"
+            
+        for title in p :
+            print "here"
+            #Retrieve commit message and corresponding URL
+            a_links = pq(title).children('a')
+            titleStr = pq(a_links).attr('title')
+            if(titleStr is None or a_links is None) :
+                continue
+            if(len(titleStr) > 0) :
+                    titleStr = titleStr.split("\n")
+                    title = titleStr[0]
+                    
+                    #check if there is a pull request
+                    mergeNum = re.findall(r'#\d+', title)
+                    
+                    if(mergeNum is not None and len(mergeNum) > 0) :
+                        mergeNum = mergeNum[0]
+                        mergeURL = project('a:contains("' + mergeNum + '")').attr('href')
+                        title = retrieveMergeMsg(mergeURL)
+            else:
+                continue
+    except Exception, e:
+        print pageURL.replace("https://github.com/", "") + " is exception"
+        print str(e)
+        return False
+
+#+++++++++Main Program
+project = pq(pageURL)
+commitAddr = project("li.commits").children("a").attr("href")
+
+for i in range(1, 200) :
+    #Retrieve page content
+    if(retrievePageContent(pageURL, commitAddr, i) == False) :
+        break
+
+
+{% endhighlight %}
+
+{% highlight python%}
+#isFix.py
+scoreDict = {
+"doc" : -20,
+"document " : -20,
+"readme" : -20,
+"version " : -20,
+".md" : -20,
+"message" : -20,
+"documentation " : -20,
+"docs" : -20,
+
+"environment" : -10,
+"typo " : -10,
+"sbt" : -10,
+"spec" : -10,
+"dependencies " : -10,
+"dependency " : -10,
+"deprecat" : -10,
+"link " : -10,
+"rename" : -10, 
+"indent" : -10, 
+
+"better" : -5,
+"report" : -5, 
+"comment " : -5,
+"format " : -5,
+"improve " : -5,
+"sample " : -5,
+"example " : -5,
+"file name " : -5,
+"release " : -5,
+"add " : -5,
+"build" : -5,
+"version " : -5,
+
+
+"fix" : +5,
+"fixes" : +5,
+"exception" : +5,
+"missing" : +5,
+"don't" : +5,
+"do not" : +5,
+"failure" : +5,
+"return type" : +5,
+"should" : +5,
+
+
+"buggy" : +10,
+"bugfix" : +10,
+"bug" : +10,
+"error" : +10,
+"errors" : +10,
+"incorrect" : +10,
+"corrupt" : +10,
+"mistake" : +10,
+"infinite" : +10,
+"stackoverflow" : +10,
+"null pointer" : +10,
+"null" : +10,
+"npe" : +10
+
+}
+
+
+def isFix(str) :
+    str = str.lower()
+    finalScore = 0
+    for key, value in scoreDict.iteritems() :
+        if(str.find(key) != -1) :
+            finalScore += value
+    if(finalScore > 0) :
+        return True
+    else :
+        return False
+
+
+{% endhighlight %}
