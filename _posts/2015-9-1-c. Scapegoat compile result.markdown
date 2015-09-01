@@ -1,0 +1,105 @@
+---
+layout: post
+title:  "Compile result of scala projects with Scapegoat plugin"
+date:   2015-9-1
+tags:
+- Scapegoat
+- Lab
+---
+
+
+####Reasons for Compilation Failure
+* Scala version is 2.10, which is not supported by Scapegoat
+* Project is too large, and recording all patterns causes JVM GarbageCollection over limit 
+* Can't resolve buildinfo, which, I don't know why
+* sbt build failed
+* Compile error with Scapegoat plugin attached, but sbt compile always succeed. Maybe there are some bug in Scapegoat plugin.
+
+####How to add Scapegoat plugin
+Write following code to project/plugins.sbt
+----addSbtPlugin("com.sksamuel.scapegoat" %% "sbt-scapegoat" % "1.0.0")
+
+####Results
+#####Success
+* adamw_macwire		56s
+* AsyncttpClient-async...	
+* daniel-trinh_scalariform
+* p2t2_figaro			122s
+* dickwall_subcut		13s
+* dispatch_reboot		25s
+* dylemma_scala-frp	13s
+* etaty_rediscala		50s
+* fehmicansaglam_tepkin 	54s
+* finagle_finch		80s
+* maxcellent_lamma	24s
+* mesosphere_chaos	45s
+* ngocdaothanh_netcaty_master	4s
+* nafg_reactive_v0.4.0	98s
+* novus_salat__master	29s
+* ReactiveMongo_ReactiveMongo_master	58s
+* ReactiveX_RxScala_0.x	32s
+* romainreuillon_mgo_master	98s
+* SandroGrzicic_ScalaBuff_master	28s
+* scala_async_master	33s
+* scala_pickling_0.10.x	104s
+* scala_scala-parser-combinators_master	27s
+* sirthias_scala-ssh_master	23s
+* sksamuel_elastic4s_master	105s
+* squeryl_squeryl_master	74s
+* stephenmcd_curiodb_master	162s, most time on compiling java sources
+* xitrum-framework_scala-xgettext_master	4s(only one file)
+* xitrum-framework_scaposer_master	12s
+* twitter_finatra_master	510s, most used on resolving
+* unfiltered_unfiltered_0.9.0	122s, some Compilation failed
+
+
+#####Failed:
+* eed3si9n_scalaxb----multiple compile error
+* aselab-scala-activerecord----multiple compile error
+* dispatch_reboot----can't resolve BuildInfo
+* BIDData_BIDMach
+* eardouglas_xsbt-web-plugin----can't compile due to changing version from 2.10 to 2.11
+* etorreborre_specs2----unknown compile error(some .scala could be compiled but some not)
+* factorie_factorie----outOfMemoryError
+* FasterXML_jackson-module-scala-master----null pointer error due to invalid path
+ (jackson-module-scala-master\target\scala-2.11/scapegoat-report])
+* fwbrasil_activate----cannot resolve org.scala.reflections
+* garyKeorkunian_squants----cannot change scala version to 2.11
+* intel-hadoop_gearpump----overhead limit exceed ->outOfMemoryError
+* json4s_json4s----96s, compilation failed halfway
+* julien-truffaut_Monocle----66s, compilation failed halfway
+* lift-framework----278s, compilation failed halfway
+* lihaoyi_scala-js-fiddle	----36s, compilation error halfway
+* intel-hadoop_gearpump ----overhead limit exceed ->outOfMemoryError when compiling
+* ISCPIF_openmole----unknown error
+* jaliss_securesocial----loading definitions takes too long
+* Jetbrains_sbt-ide-settings----cannot change scala version to 2.11
+* jrudolph_sbt-dependency-graph----version 2.10
+* js-scala_js-scala----cannot resolve dependency : EPFL#lms_2.11;0.3-SNAPSHOT: not found
+* lihaoyi_scalatags----unknown error, sbt failed
+* mauricio_postgresql-async----plugin not loaded ?
+* milessabin_shapeless----compile error
+* mohiva_play-silhouette_master
+* monifu_monifu_master----compile error
+* pocorall_scaloid_master----null pointer error
+* propensive_rapture_dev----sbt build failed
+* puffnfresh_wartremover_latest-release----sbt build failed
+* rickynils_scalacheck_master----use scala version 2.10
+* romainreuillon_gridscale_master----out of memory
+* scalanlp_breeze_master	----takes too long
+* scalatra_scalatra_2.4.x----numerous compile error
+* scaldi_scaldi_master----
+* scalikejdbc_scalikejdbc_master----scala version 2.10
+* scodec_scodec_master----53s, compile error
+* sirthias_parboiled2_master----version 2.10
+* skinny-framework_skinny-framework_master----version 2.10
+* spray_sbt-revolver_master----type error in expression
+* t2v_play2-auth_master----94s, compilation failed
+* storm-enroute_reactive-collections_master----too many compile errors
+* takezoe_gitbucket_master----compile error
+* tpolecat_doobie_master----compile error, missing buildinfo.scala
+* twitter_cassovary_master----Compilation failed
+* w3c_banana-rdf_0.8.x---- java.lang.OutOfMemoryError: GC overhead limit exceeded
+* websudos_phantom_develop----sbt resolution failed
+* xitrum-framework_glokka_master----Compilation error
+* xitrum-framework_scalive_master----Compilation error
